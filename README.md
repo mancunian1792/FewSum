@@ -1,3 +1,89 @@
+# To set up Inference
+
+```
+sh download_and_prepare_inference.sh
+```
+The above file will download the required tar files (model weights) and create few directories which the existing code depends on.
+
+
+```
+conda create -n fewsum python=3.7.5
+```
+
+```
+conda activate fewsum
+```
+
+Install required modules.
+
+```
+pip install -r requirements.txt
+```
+
+Add the root directory to the path if you want to execute scripts from the command line.
+
+```
+export PYTHONPATH=root_path:$PYTHONPATH
+```
+
+
+Start the Fast API server
+
+```
+uvicorn fewsum.inference:app --reload
+```
+You can see the swagger url in the [localhost-swagger](http://127.0.0.1:8000/docs). 
+
+To try out a sample request, use the following json
+
+```
+{
+  "requests": [
+    {
+      "reviews": [
+        "I got this airpods pro today and I cant with to use my new airpods, but when I open and check the box, this airpod is made in Vietnam, I have read some people write the airpods made in Vietnam have quality issues, and I open to check it, I found the glue overflow at bonding position, you can see the yellow line, it is glue, and it have cut feel when you touch the body of this airpods",
+"These are really nice earphones. I ve had mine for about a year and have enjoyed them from the start. Once you find the right size of rubber inserts they stay in your ears better. The Noise Canceling feature is really nice especially when it comes to trying to listening to music or a phone call with loud background noise. I have also used these as hearing aids to listen to conversations ",
+"I received them one day early but the packaging was damaged and the shipping box was fine witch means that they were damaged before they shipped. This is very disappointing but the ear buds themselves seem fine just hope that in the long run I dont run into any issues",
+"Slight upgrade from original AirPod Pros because of the magsafe charging, everything else seem same as last gen but, still great headphones and love the noise cancellation feature!",
+"These little things pack one hell of a punch!Apples new noise cancellation and transparency modes lay the groundwork for a new generation of wireless headphones. Yes others may have used similar technology before, but Apples simplistic UI made for the airpods pro make the experience so much better than what other companies offer.Coming from the first generation airpods, the experience ",
+"Received these AirPods out the box, exactly as shown on pictures. Plastic Seal was completely compromised. Immediately knew something was up. CLEARLY FAKE AirPods they couldn’t even get the boxes to match correctly. Just go straight to Apple avoid this hassle.",
+"I’m thrilled. I love the fact there’s multiple ear tips and the small ones fit my ears great. Thrilled with the noise canceling feature while I stare at a family member yapping loudly on the phone and I don’t have to crank my volume up to drown them out. The controls are easy. It pauses music when I take an earbud out, so I’m not fumbling to pause and then yanking an earbud out while yel",
+"Received today. One bud had scratches and scuffs. Doesnt look new at all. Ive returned for an exchange and will update my review when I get a new NEW pair.Received today. One bud had scratches and scuffs. Doesnt look new at all. Ive returned for an exchange and will update my review when I get a new NEW pair.UPDATE: Amazon shipped a replacement next day. This pair appears better, but"
+      ],
+      "rating": [
+        1,4,3,5,5,1,5,3
+      ],
+      "category": "electronics",
+      "group_id": "B09JQMJHXY"
+    },
+{
+      "reviews": [
+        "have a pair of Jaybird headphones and it was nice to compare these headphones. These headphones have really good sound and pair with your phone super easy! The carrying case was a nice touch and the product was very well packaged. I havent used the other things that have come with the package, but I plan on using them.",
+"OK, so initially I didnt like the way these sounded (I am a DJ and have $300 DJ headphones, so I had high expectations I suppose). Anyway, I took a shot on these for the gym - and initially they sounded like complete crap (super distorted at high volume, no bass, etc.) Then I switched to the RED memory foam tips (included in my box, but not listed in the description)",
+"2nd unit i returned takebit back on the drawing board the recharge just doesnt work, and if you buy it for sure yours will fail ill bet on it, both mine failed after a month of normal use",
+"Read so many reviews on both the Canadian and US Amazon site about how awesome the Senso headphones are before I purchased them. Needless to say was I pretty excited given the consistency of feedback on both sites. Sadly, within 10 secs of the first song i have to say the headphones sound quality is probably some of the worst ive ever experienced. Believe me im no audiophile, never o",
+"The sound was great BUT I’ve owned 2 pairs and the first lasted 3 weeks and the second only one week. They won’t charge. I only wear them for workouts and they have died on me. I contacted the company and they responded saying how to reset them. That didn’t work. I contacted them to see where to send them to get repaired or replaced as they are under warranty and they haven’t got back to",
+"This product looked exactly as pictured with good sound quality. Only problem is that my ears are too small and the hooks wont stay in place. Vendor was great and I received the item really quickly too.",
+"Like most Bluetooth headphones these sometimes disconnect and a kind of bulky. For the price they are worth it though.",
+"These headphones are the newer version then the previous ones. Love them.Worth the 25$ ! Get These headphones great great sound quality great build great everything only takes an hour and a half to charge up you get a full eight hour battery with them and you get a carrying case as well I love everything about these headphones are my new best friend on top of that that your loop shapes t"
+      ],
+      "rating": [
+        4,5,1,2,1,4,4,5
+      ],
+      "category": "electronics",
+      "group_id": "B0792QJQT1"
+    }
+  ]
+}
+```
+
+## Caveats to the current usage
+1. Review length shouldn't exceed 390 characters
+2. CUDA is a must.
+3. Each produt must have only 8 reviews. 
+4. Each product must have a rating (for each review), a category (electronics, cloth etc) and a group id which can be extracted from the amazon url itself.
+
+
 # Few-Shot Learning for Opinion Summarization
 
 This repository contains the codebase along with accompanying artifacts of the [corresponding work](https://arxiv.org/pdf/2004.14884.pdf) published at EMNLP 2020, Dominican Republic.
