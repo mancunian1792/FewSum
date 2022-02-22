@@ -1,0 +1,102 @@
+
+#################################################################
+#                    PYTORCHPIPELINE'S SETUP                    #
+#################################################################
+
+  worker_processes_number: 0
+  seed: None
+  error_on_invalid_chunk: False
+  timeout: 5
+
+#########################   CsvReader   #########################
+
+  chunk_size: None
+  worker_threads_num: 1
+  parser_kwargs: {quating: 3, engine: 'python', sep: '\t', encoding: 'utf-8'}
+  buffer_size: None
+  use_lists: True
+  timeout: None
+
+#####################   ChunkAccumulator   ######################
+
+  coll: UnitCollector({max_size: 15})
+
+#####################   AmazonTransformer   #####################
+
+  fnames_to_copy: ['group_id', 'cat']
+
+########################   SummMapper   #########################
+
+  fname: 'summs'
+  new_indx_fname: 'summ_group_indx'
+
+#######################   FieldRenamer   ########################
+
+  old_to_new_fnames: {group_id: 'group_id', cat: 'cat', summs: 'summ'}
+
+##################   GoldSummRevIndxsCreator   ##################
+
+
+#########################   DummyProp   #########################
+
+  fname: 'summ'
+  new_fname: 'rating_prop'
+  fval: 0.0
+
+#######################   SummRougeProp   #######################
+
+  summ_fname: 'summ'
+  rev_fname: 'rev'
+  new_fname: 'rouge_prop'
+  summ_group_indx_fname: 'summ_group_indx'
+  group_rev_indxs_fname: 'group_rev_indxs'
+
+######################   TokenProcessor   #######################
+
+  field_names: ['rev', 'summ']
+  tok_func: <lambda>
+  tok_cleaning_func: None
+  tok_matching_func: None
+  lowercase: False
+
+########################   SummLenProp   ########################
+
+  summ_fname: 'summ'
+  rev_fname: 'rev'
+  new_fname: 'len_prop'
+  summ_group_indx_fname: 'summ_group_indx'
+  group_rev_indxs_fname: 'group_rev_indxs'
+  tok_func: None
+
+##########################   POVProp   ##########################
+
+  text_fname: 'summ'
+  new_fname: 'pov_prop'
+
+########################   VocabMapper   ########################
+
+  symbols_attr: 'id'
+  field_names_to_vocabs: {'rev': 'WordVocabulary', 'summ': 'WordVocabulary'}
+
+########################   SeqWrapper   #########################
+
+  fname: ['rev', 'summ']
+  start_el: 2
+  end_el: 3
+
+##########################   Padder   ###########################
+
+  fnames: ['rev', 'summ']
+  mask_fnames: ['rev_mask', 'summ_mask']
+  pad_symbol: 0
+  symbol_to_mask: None
+  padding_mode: 'right'
+  axis: 1
+
+######################   NumpyFormatter   #######################
+
+  fnames: ['len_prop', 'rating_prop', 'pov_prop', 'rouge_prop']
+
+#################################################################
+#                                                               #
+#################################################################

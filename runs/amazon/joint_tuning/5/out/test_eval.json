@@ -1,0 +1,263 @@
+{
+  "electronics": {
+    "B09JQMJHXY": {
+      "gold_summs": [
+        [
+          [
+            "This is a made up review.",
+            "No one cares about this review"
+          ],
+          [
+            "This is a made up review.",
+            "No one cares about this review"
+          ],
+          [
+            "This is a made up review.",
+            "No one cares about this review"
+          ]
+        ]
+      ],
+      "gen_summ": [
+        [
+          "These ear buds are great.",
+          "The sound quality is great and they are comfortable to wear.",
+          "The only downside is that they have a tendency to fall out of the ear when you use them for extended periods of time.",
+          "They do not stay in place as well as other ear buds.",
+          "Overall, they are well worth the money."
+        ]
+      ],
+      "rouge": [
+        {
+          "rouge1": {
+            "p": 0.03389830508474576,
+            "r": 0.16666666666666666,
+            "f": 0.056338028169014086
+          },
+          "rouge2": {
+            "p": 0.0,
+            "r": 0.0,
+            "f": 0.0
+          },
+          "rougeL": {
+            "p": 0.03389830508474576,
+            "r": 0.16666666666666666,
+            "f": 0.056338028169014086
+          }
+        }
+      ],
+      "props": [
+        {
+          "len": -56.5,
+          "rating": 0.0,
+          "rouge": [
+            0.07444187998771667,
+            0.004166666883975267,
+            0.055385276675224304
+          ],
+          "pov": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "pred_props": [
+        {
+          "len_prop": 0.00045990943908691406,
+          "rating_prop": 0.05363880842924118,
+          "rouge_prop": [
+            0.26516100764274597,
+            0.0284724161028862,
+            0.15154893696308136
+          ],
+          "pov_prop": [
+            0.009522998705506325,
+            2.0693800252047367e-05,
+            0.9904515743255615,
+            4.73964428238105e-06
+          ]
+        }
+      ],
+      "inp_rev": [
+        [
+          [
+            "I got this airpods Pro today and I cant with to use my new airpods, but when I open and check the box, this airpod is made in vietnam, I have read some people write the airpods made in Vietnam have quality issues, and I open to check it, I found the glue overflow at bonding position, you can see the yellow line, it is glue, and it have cut feel when you touch the body of this airpods"
+          ],
+          [
+            "These are really nice earphones.",
+            "I ve had mine for about a year and have enjoyed them from the start.",
+            "Once you find the right size of rubber inserts they stay in your ears better.",
+            "The noise canceling feature is really nice especially when it comes to trying to listening to music or a phone call with loud background noise.",
+            "I have also used these as hearing aids to listen to conversations"
+          ],
+          [
+            "I received them one day early but the packaging was damaged and the shipping box was fine witch means that they were damaged before they shipped.",
+            "This is very disappointing but the ear buds themselves seem fine just hope that in the long run I dont run into any issues"
+          ],
+          [
+            "Slight upgrade from original airpod pros because of the MagSafe charging, everything else seem same as last gen but, still great headphones and love the noise cancellation feature!"
+          ],
+          [
+            "These little things pack one hell of a punch!",
+            "Apples new noise cancellation and transparency modes lay the groundwork for a new generation of wireless headphones.",
+            "Yes others may have used similar technology before, but apples simplistic UI made for the airpods Pro make the experience so much better than what other companies offer.coming from the first generation airpods, the experience"
+          ],
+          [
+            "Received these airpods out the box, exactly as shown on pictures.",
+            "Plastic seal was completely compromised.",
+            "Immediately knew something was up.",
+            "Clearly fake airpods they couldn \u2019 t even get the boxes to match correctly.",
+            "Just go straight to Apple avoid this hassle."
+          ],
+          [
+            "I \u2019 m thrilled.",
+            "I love the fact there \u2019 s multiple ear tips and the small ones fit my ears great.",
+            "Thrilled with the noise canceling feature while I stare at a family member yapping loudly on the phone and I don \u2019 t have to crank my volume up to drown them out.",
+            "The controls are easy.",
+            "It pauses music when I take an earbud out, so i \u2019 m not fumbling to pause and then yanking an earbud out while yel"
+          ],
+          [
+            "Received today.",
+            "One bud had scratches and scuffs.",
+            "Doesnt look new at all.",
+            "Ive returned for an exchange and will update my review when I get a new new pair.Received today.",
+            "One bud had scratches and scuffs.",
+            "Doesnt look new at all.",
+            "Ive returned for an exchange and will update my review when I get a new new pair.update: Amazon shipped a replacement next day.",
+            "This pair appears better, but"
+          ]
+        ]
+      ]
+    },
+    "B0792QJQT1": {
+      "gold_summs": [
+        [
+          [
+            "This is a made up review.",
+            "No one cares about this review"
+          ],
+          [
+            "This is a made up review.",
+            "No one cares about this review"
+          ],
+          [
+            "This is a made up review.",
+            "No one cares about this review"
+          ]
+        ]
+      ],
+      "gen_summ": [
+        [
+          "These headphones are great for the price.",
+          "They are comfortable, sound quality is good, and are comfortable to wear.",
+          "The cord is a little short, but that's to be expected with headphones that don't have an extension cord.",
+          "Overall, it's a great product for a great price."
+        ]
+      ],
+      "rouge": [
+        {
+          "rouge1": {
+            "p": 0.04,
+            "r": 0.16666666666666666,
+            "f": 0.06451612903225806
+          },
+          "rouge2": {
+            "p": 0.02040816326530612,
+            "r": 0.0909090909090909,
+            "f": 0.03333333333333333
+          },
+          "rougeL": {
+            "p": 0.04,
+            "r": 0.16666666666666666,
+            "f": 0.06451612903225806
+          }
+        }
+      ],
+      "props": [
+        {
+          "len": -49.75,
+          "rating": 0.0,
+          "rouge": [
+            0.05931248888373375,
+            0.0,
+            0.050273749977350235
+          ],
+          "pov": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "pred_props": [
+        {
+          "len_prop": 1.0448338985443115,
+          "rating_prop": 0.05349321663379669,
+          "rouge_prop": [
+            0.2677898108959198,
+            0.032593175768852234,
+            0.16161683201789856
+          ],
+          "pov_prop": [
+            0.01133340410888195,
+            3.398332046344876e-05,
+            0.9886208176612854,
+            1.179189439426409e-05
+          ]
+        }
+      ],
+      "inp_rev": [
+        [
+          [
+            "Have a pair of Jaybird headphones and it was nice to compare these headphones.",
+            "These headphones have really good sound and pair with your phone super easy!",
+            "The carrying case was a nice touch and the product was very well packaged.",
+            "I havent used the other things that have come with the package, but I plan on using them."
+          ],
+          [
+            "Ok, so initially I didnt like the way these sounded (i am a DJ and have $300 DJ headphones, so I had high expectations I suppose).",
+            "Anyway, I took a shot on these for the gym - and initially they sounded like complete crap (super distorted at high volume, no bass, etc.)",
+            "Then I switched to the red memory foam tips (included in my box, but not listed in the description)"
+          ],
+          [
+            "2nd unit I returned takebit back on the drawing board the recharge just doesnt work, and if you buy it for sure yours will fail ill bet on it, both mine failed after a month of normal use"
+          ],
+          [
+            "Read so many reviews on both the Canadian and us Amazon site about how awesome the Senso headphones are before I purchased them.",
+            "Needless to say was I pretty excited given the consistency of feedback on both sites.",
+            "Sadly, within 10 secs of the first song I have to say the headphones sound quality is probably some of the worst ive ever experienced.",
+            "Believe me im no audiophile, never o"
+          ],
+          [
+            "The sound was great but i \u2019 ve owned 2 pairs and the first lasted 3 weeks and the second only one week.",
+            "They won \u2019 t charge.",
+            "I only wear them for workouts and they have died on me.",
+            "I contacted the company and they responded saying how to reset them.",
+            "That didn \u2019 t work.",
+            "I contacted them to see where to send them to get repaired or replaced as they are under warranty and they haven \u2019 t got back to"
+          ],
+          [
+            "This product looked exactly as pictured with good sound quality.",
+            "Only problem is that my ears are too small and the hooks wont stay in place.",
+            "Vendor was great and I received the item really quickly too."
+          ],
+          [
+            "Like most bluetooth headphones these sometimes disconnect and a kind of bulky.",
+            "For the price they are worth it though."
+          ],
+          [
+            "These headphones are the newer version then the previous ones.",
+            "Love them.Worth the 25 $!",
+            "Get these headphones great great sound quality great build great everything only takes an hour and a half to charge up you get a full eight hour battery with them and you get a carrying case as well I love everything about these headphones are my new best friend on top of that that your loop shapes t"
+          ]
+        ]
+      ]
+    }
+  },
+  "<GROUPING_FNAMES>": [
+    "category",
+    "group_id"
+  ]
+}

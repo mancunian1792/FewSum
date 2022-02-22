@@ -1,0 +1,45 @@
+2022-02-21 23:25:56,160 [INFO]: CUDA_VISIBLE_DEVICES=0
+2022-02-21 23:26:00,580 [INFO]: Loaded BPE from: 'artifacts/amazon/misc/bpe_32000_train.int'.
+2022-02-21 23:26:00,580 [INFO]: Loading a vocabulary from 'artifacts/amazon/misc/bpe_32000_train.txt'. min_count: 1, max_vocab_size: None.
+2022-02-21 23:26:00,765 [INFO]: Loaded the vocabulary.
+2022-02-21 23:26:00,837 [INFO]: Vocabulary is written to: '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/2/bpe_32000_vocab.txt'.
+2022-02-21 23:26:01,001 [INFO]: Frozen all parameters except: plugin,_tr_stack.layers.0.mem_attn,_tr_stack.layers.1.mem_attn,_tr_stack.layers.2.mem_attn,_tr_stack.layers.3.mem_attn,_tr_stack.layers.4.mem_attn,_tr_stack.layers.5.mem_attn.
+2022-02-21 23:26:05,197 [INFO]: Moved the model to: 'cuda'
+2022-02-21 23:26:05,273 [INFO]: Loaded the model's state from: 'artifacts/amazon/checkpoints/joint_tuning.tar'.
+2022-02-21 23:26:05,274 [INFO]: Experiment's output will be saved to: '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/2'.
+2022-02-21 23:26:05,274 [INFO]: 
+#################################################################################
+#          Joint tuning: the plug-in network and the memory attention.          #
+#################################################################################
+
+2022-02-21 23:26:05,276 [INFO]: 
+###############################################################################################################################################################################################################################################
+#          seed: 42, cuda_device_ids: [0], training_logging_step: 100, shuffler_buffer_size: 50                                                                                                                                               #
+#          grads_clip: 0.250, strict_load: True, dataset: amazon, min_rev_per_group: 9, max_rev_per_group: 9                                                                                                                                  #
+#          base_data_path: artifacts/amazon, train_fp: artifacts/amazon/reviews/train/                                                                                                                                                        #
+#          val_fp: artifacts/amazon/reviews/val/, gold_train_fp: artifacts/amazon/gold_summs/train.csv                                                                                                                                        #
+#          gold_val_fp: artifacts/amazon/gold_summs/val.csv, gold_test_fp: artifacts/amazon/gold_summs/test.csv                                                                                                                               #
+#          word_vocab_fp: artifacts/amazon/misc/tc_word_train.txt, checkpoint_fn: checkpoint.tar                                                                                                                                              #
+#          modules_to_unfreeze: ['plugin', '_tr_stack.layers.0.mem_attn', '_tr_stack.layers.1.mem_attn', '_tr_stack.layers.2.mem_attn', '_tr_stack.layers.3.mem_attn', '_tr_stack.layers.4.mem_attn', '_tr_stack.layers.5.mem_attn']          #
+#          subword_num: 32000, bpe_fp: artifacts/amazon/misc/bpe_32000_train.int, bpe_vocab_fp: artifacts/amazon/misc/bpe_32000_train.txt                                                                                                     #
+#          tcaser_model_path: artifacts/amazon/misc/tcaser.model, min_seq_len: 20, max_seq_len: 105                                                                                                                                           #
+#          seq_max_len: 105, beam_size: 50, block_ngram_repeat: 3, ngram_mirror_window: 3                                                                                                                                                     #
+#          mirror_conjs: ['and', 'or', ',', 'but'], block_consecutive: True, epochs: 33                                                                                                                                                       #
+#          learning_rate: 0.000, train_groups_per_batch: 15, val_groups_per_batch: 20                                                                                                                                                         #
+#          eval_groups_per_batch: 17, experiments_folder: joint_tuning, output_dir: runs/amazon/joint_tuning                                                                                                                                  #
+#          output_path: /media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/2                                                                                                     #
+#          checkpoint_path: artifacts/amazon/checkpoints/joint_tuning.tar                                                                                                                                                                     #
+###############################################################################################################################################################################################################################################
+
+2022-02-21 23:26:05,276 [INFO]: 
+#########################################################################################################################
+#          word_emb_dim: 390, len_emb_num: 110, len_emb_dim: 10, word_emb_dropout: 0.100                                #
+#          drop_enc_embds: True, ff_dim: 1000, dropout: 0.100, mem_att_dropout: 0.100, nheads: 8                        #
+#          nlayers: 6, plugin_dim: 30, plugin_ff_dim: 20, plugin_dropout: 0.400, plugin_mem_att_dropout: 0.150          #
+#          plugin_nheads: 3, plugin_nlayers: 3, word_emb_num: 33455                                                     #
+#########################################################################################################################
+
+2022-02-21 23:26:05,277 [INFO]: Trainable parameters: 3951249/25993409 (15.20 %).
+2022-02-21 23:26:05,278 [INFO]: Saved config to '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/2/run_conf.json'.
+2022-02-21 23:26:05,278 [INFO]: Saved config to '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/2/model_hp.json'.
+2022-02-21 23:26:05,279 [INFO]: Performing summary evaluation on {'data_path': 'artifacts/amazon/gold_summs/test.csv'}.

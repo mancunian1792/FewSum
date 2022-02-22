@@ -1,0 +1,19 @@
+{
+  "word_emb_dim": 390,
+  "len_emb_num": 110,
+  "len_emb_dim": 10,
+  "word_emb_dropout": 0.1,
+  "drop_enc_embds": true,
+  "ff_dim": 1000,
+  "dropout": 0.1,
+  "mem_att_dropout": 0.1,
+  "nheads": 8,
+  "nlayers": 6,
+  "plugin_dim": 30,
+  "plugin_ff_dim": 20,
+  "plugin_dropout": 0.4,
+  "plugin_mem_att_dropout": 0.15,
+  "plugin_nheads": 3,
+  "plugin_nlayers": 3,
+  "word_emb_num": 33455
+}

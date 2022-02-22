@@ -1,0 +1,98 @@
+2022-02-22 01:14:53,085 [INFO]: CUDA_VISIBLE_DEVICES=0
+2022-02-22 01:14:57,396 [INFO]: Loaded BPE from: 'artifacts/amazon/misc/bpe_32000_train.int'.
+2022-02-22 01:14:57,397 [INFO]: Loading a vocabulary from 'artifacts/amazon/misc/bpe_32000_train.txt'. min_count: 1, max_vocab_size: None.
+2022-02-22 01:14:57,545 [INFO]: Loaded the vocabulary.
+2022-02-22 01:14:57,600 [INFO]: Vocabulary is written to: '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/6/bpe_32000_vocab.txt'.
+2022-02-22 01:14:58,414 [INFO]: Frozen all parameters except: plugin,_tr_stack.layers.0.mem_attn,_tr_stack.layers.1.mem_attn,_tr_stack.layers.2.mem_attn,_tr_stack.layers.3.mem_attn,_tr_stack.layers.4.mem_attn,_tr_stack.layers.5.mem_attn.
+2022-02-22 01:15:01,651 [INFO]: Moved the model to: 'cuda'
+2022-02-22 01:15:01,723 [INFO]: Loaded the model's state from: 'artifacts/amazon/checkpoints/joint_tuning.tar'.
+2022-02-22 01:15:01,723 [INFO]: Experiment's output will be saved to: '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/6'.
+2022-02-22 01:15:01,724 [INFO]: 
+#################################################################################
+#          Joint tuning: the plug-in network and the memory attention.          #
+#################################################################################
+
+2022-02-22 01:15:01,726 [INFO]: 
+###############################################################################################################################################################################################################################################
+#          seed: 42, cuda_device_ids: [0], training_logging_step: 100, shuffler_buffer_size: 50                                                                                                                                               #
+#          grads_clip: 0.250, strict_load: True, dataset: amazon, min_rev_per_group: 9, max_rev_per_group: 9                                                                                                                                  #
+#          base_data_path: artifacts/amazon, train_fp: artifacts/amazon/reviews/train/                                                                                                                                                        #
+#          val_fp: artifacts/amazon/reviews/val/, gold_train_fp: artifacts/amazon/gold_summs/train.csv                                                                                                                                        #
+#          gold_val_fp: artifacts/amazon/gold_summs/val.csv, gold_test_fp: artifacts/amazon/gold_summs/test.csv                                                                                                                               #
+#          word_vocab_fp: artifacts/amazon/misc/tc_word_train.txt, checkpoint_fn: checkpoint.tar                                                                                                                                              #
+#          modules_to_unfreeze: ['plugin', '_tr_stack.layers.0.mem_attn', '_tr_stack.layers.1.mem_attn', '_tr_stack.layers.2.mem_attn', '_tr_stack.layers.3.mem_attn', '_tr_stack.layers.4.mem_attn', '_tr_stack.layers.5.mem_attn']          #
+#          subword_num: 32000, bpe_fp: artifacts/amazon/misc/bpe_32000_train.int, bpe_vocab_fp: artifacts/amazon/misc/bpe_32000_train.txt                                                                                                     #
+#          tcaser_model_path: artifacts/amazon/misc/tcaser.model, min_seq_len: 20, max_seq_len: 105                                                                                                                                           #
+#          seq_max_len: 105, beam_size: 50, block_ngram_repeat: 3, ngram_mirror_window: 3                                                                                                                                                     #
+#          mirror_conjs: ['and', 'or', ',', 'but'], block_consecutive: True, epochs: 33                                                                                                                                                       #
+#          learning_rate: 0.000, train_groups_per_batch: 15, val_groups_per_batch: 20                                                                                                                                                         #
+#          eval_groups_per_batch: 17, experiments_folder: joint_tuning, output_dir: runs/amazon/joint_tuning                                                                                                                                  #
+#          output_path: /media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/6                                                                                                     #
+#          checkpoint_path: artifacts/amazon/checkpoints/joint_tuning.tar                                                                                                                                                                     #
+###############################################################################################################################################################################################################################################
+
+2022-02-22 01:15:01,726 [INFO]: 
+#########################################################################################################################
+#          word_emb_dim: 390, len_emb_num: 110, len_emb_dim: 10, word_emb_dropout: 0.100                                #
+#          drop_enc_embds: True, ff_dim: 1000, dropout: 0.100, mem_att_dropout: 0.100, nheads: 8                        #
+#          nlayers: 6, plugin_dim: 30, plugin_ff_dim: 20, plugin_dropout: 0.400, plugin_mem_att_dropout: 0.150          #
+#          plugin_nheads: 3, plugin_nlayers: 3, word_emb_num: 33455                                                     #
+#########################################################################################################################
+
+2022-02-22 01:15:01,727 [INFO]: Trainable parameters: 3951249/25993409 (15.20 %).
+2022-02-22 01:15:01,728 [INFO]: Saved config to '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/6/run_conf.json'.
+2022-02-22 01:15:01,728 [INFO]: Saved config to '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/6/model_hp.json'.
+2022-02-22 01:15:01,729 [INFO]: Performing summary evaluation on {'data_path': 'artifacts/amazon/gold_summs/test.csv'}.
+2022-02-22 01:15:15,328 [INFO]: ###  ROUGE Scores  ###
+2022-02-22 01:15:15,328 [INFO]:    - rouge1 p: 0.0369, r: 0.1667, f: 0.0604
+2022-02-22 01:15:15,328 [INFO]:    - rouge2 p: 0.0102, r: 0.0455, f: 0.0167
+2022-02-22 01:15:15,328 [INFO]:    - rougeL p: 0.0369, r: 0.1667, f: 0.0604
+2022-02-22 01:15:15,329 [INFO]: Wrote the eval output to: '/media/harishramani/extradrive1/code/oogway/experiments/summarization/inference_harish/runs/amazon/joint_tuning/6/out/test_eval.json'.
+2022-02-22 01:15:15,330 [INFO]: Not generated 0 summaries.
+2022-02-22 01:15:15,330 [ERROR]: Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/fastapi/applications.py", line 259, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/fastapi/routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/starlette/concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/anyio/to_thread.py", line 29, in run_sync
+    limiter=limiter)
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/anyio/_backends/_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "/home/harishramani/anaconda3/envs/fewsum_inference/lib/python3.7/site-packages/anyio/_backends/_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "./fewsum/inference.py", line 331, in get_summary
+    rev2_summary = ' '.join(data[req2.group_id][req2.group_id]['gen_summ'][0])
+KeyError: 'B0792QJQT1'
+2022-02-22 01:17:09,533 [INFO]: Shutting down
+2022-02-22 01:17:09,634 [INFO]: Waiting for application shutdown.
+2022-02-22 01:17:09,634 [INFO]: Application shutdown complete.
+2022-02-22 01:17:09,634 [INFO]: Finished server process [954434]
